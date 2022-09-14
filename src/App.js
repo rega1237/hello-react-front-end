@@ -14,7 +14,7 @@ function App() {
             element={<Greeting />}
           />
         </Routes>
-    </Router>
+      </Router>
     </div>
   );
 }

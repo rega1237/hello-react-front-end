@@ -22,12 +22,9 @@ const getMessage = (message) => ({
   payload: message,
 });
 
-export const fetchMessage = (dispatch) => {
-  return fetch(url)
-    .then((response) => response.json())
-    .then((json) => {
-      console.log(json);
-      dispatch(getMessage(json));
-    })
-    .catch((error) => console.log(error));
-}
+export const fetchMessage = (dispatch) => fetch(url)
+  .then((response) => response.json())
+  .then((json) => {
+    dispatch(getMessage(json));
+  })
+  .catch((error) => console.log(error));
